@@ -14,7 +14,7 @@ Bean (객체 설정)
 	  객체 생성 어노테이션 (@Component)
 	  	객체의 유형별로 식별할 수 있는 이름을 가진 어노테션
 	  	--@Service			xxxServiceImpl	: 비즈니스 로직을 처리하는 Service 클래스
-	  	--@rRespoitory		xxxDAO			: DB연동을 처리하는 DAO클래스
+	  	--@Respoitory		xxxDAO			: DB연동을 처리하는 DAO클래스
 	  	--@Controller 		xxxController	: 사용자 요청을 젱하는 Controller 클래스
 	  의존성 주입 어노테이션 (DI) 
 	  	1. @Autowired  : 주로 변수 위에 설정 해당타입의 객체를 찾아서 주입  (Spring)

@@ -130,6 +130,7 @@ public class BoardDAO  {
 				board.setContent(rs.getString("content"));
 				board.setRegdate(rs.getDate("regdate"));
 				board.setCnt(rs.getInt("cnt"));
+				System.out.println("성공");
 			}
 			
 		}catch(Exception e) {
@@ -165,6 +166,7 @@ public class BoardDAO  {
 				boardList.add(board);
 				
 			}
+			System.out.println("성공");
 			
 			
 		}catch(Exception e) {
