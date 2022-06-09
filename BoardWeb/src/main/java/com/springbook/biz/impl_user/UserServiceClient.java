@@ -35,7 +35,7 @@ public class UserServiceClient {
 		}
 		
 		// 3-2 insert
-		vo.setId("test20");
+		vo.setId("test27");
 		vo.setPassword("3456");
 		vo.setName("Å×½ºÆ®");
 		vo.setRole("test");

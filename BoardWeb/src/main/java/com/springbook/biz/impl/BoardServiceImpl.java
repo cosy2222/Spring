@@ -13,7 +13,7 @@ import com.springbook.biz.common.LogAdvice;
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired		// 객체 주입
-	private BoardDAO boardDAO;
+	private BoardDAOSpring boardDAO;		// JSP에서 구현한 DAO
 	
 	// 모든 메소드가 실행전에 로그를 남겨야 한다 
 //	private LogAdvice log;

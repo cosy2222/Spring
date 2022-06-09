@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService{
 		// 3. 어노테이션을 이용한 주입 ( @Autowired )
 
 	@Autowired		//객체 주입 (타입으로 주입) , 어노테이션으로 객체 주입
-	private  UserDAO dao ;
+	private  UserDAOSpring dao ;
 	
 //	// setter 를 사용해서 객체 주입 ( xml 설정)
 //	public void setUserDAO(UserDAO dao) {
