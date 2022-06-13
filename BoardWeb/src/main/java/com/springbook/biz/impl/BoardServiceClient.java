@@ -20,7 +20,9 @@ public class BoardServiceClient {
 		
 		// 3. 글 등록 기능테스트
 		BoardVO vo = new BoardVO();
-		vo.setTitle("테스트 제목11");
+		
+		vo.setSeq(400);
+		vo.setTitle("테스트 제목");
 		vo.setWriter("ㅁㅁㅁ");
 		vo.setContent("테스트 내용");
 		

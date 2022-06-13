@@ -30,6 +30,13 @@ public class BoardDAOSpring {
 	
 	
 	// 2. SQL 쿼리 정의 (상수로 선언)
+	
+		
+		// 트랜잭션 작동 실습시 임시로 구현
+//		private final String BOARD_INSERT = "insert into board (seq , title , writer , content)"
+//		+"values( ? , ? , ? ,?)";
+	
+	
 		private final String BOARD_INSERT = "insert into board (seq , title , writer , content)"
 								+"values( (select nvl(max(seq) , 0)+1 from board) , ? , ? ,?)";
 		
@@ -42,11 +49,6 @@ public class BoardDAOSpring {
 		
 		private final String BOARD_LIST = "select * from board order by seq desc";
 		
-		private final String BOARD_LIST_T = "select * from board where title like '%' || ? || '%' "
-									+ " order by seq desc";   // 글 제목으로 검색 쿼리 
-		
-		private final String BOARD_LIST_C = "select * from board where content like '%' || ? || '%'"
-									+ " order by seq desc";	  // 글 내용으로 검색 쿼리 
 
 		
 		// CRUD 기능 구현
@@ -54,7 +56,7 @@ public class BoardDAOSpring {
 		// 1. 글 등록
 		public void insertBoard(BoardVO vo) { 
 			System.out.println("===> JDBC로 insertBoard() 기능 처리"); 
-			JdbcTemplate.update(BOARD_INSERT, vo.getTitle(), vo.getWriter(), vo.getContent()); 
+			JdbcTemplate.update(BOARD_INSERT, vo.getSeq(), vo.getTitle(), vo.getWriter(), vo.getContent()); 
 		} 
 		
 		// 2. 글 수정
