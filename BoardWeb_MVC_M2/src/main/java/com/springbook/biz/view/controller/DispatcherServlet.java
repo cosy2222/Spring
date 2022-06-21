@@ -44,6 +44,9 @@ public class DispatcherServlet extends HttpServlet {
 		process (request,response); 
 	}
 	
+	
+	
+	
 	private void process (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		//1. 클라이언트의 요청 path 정보를 추출 
 		String uri = request.getRequestURI(); 
@@ -181,7 +184,7 @@ public class DispatcherServlet extends HttpServlet {
 						HttpSession session = request.getSession();
 						session.setAttribute("boardList", boardList);
 						response.sendRedirect("getBoardList.jsp");
-					}
+			}
 			
 		}
 		
